@@ -7,23 +7,29 @@
     <title>CRAPPO</title>
     <link rel="stylesheet" href="./css/mains.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/43f123735c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <a href="#" class="brand-logo"><img src="./image/brand-logo.png"></a>
             <nav>
-                <a href="#" class="link">Products</a>
-                <a href="#" class="link">Features</a>
-                <a href="#" class="link">About</a>
-                <a href="#" class="link">Contact</a>
+                
+                <div class="menu" id="navmenu">
+                    <i class="fas fa-times fa " onclick="hidemenu()" ></i>
+                   <a href="#" class="link">Products</a>
+                   <a href="#" class="link">Features</a>
+                   <a href="#" class="link">About</a>
+                   <a href="#" class="link">Contact</a>
+                </div>   
                 <a href="#" class="link">Login</a>
-                <a href="#" class="button-secondary">Register</a>
+                <a href="#" class="button-secondary ">Register</a>
+                <i class="fa-solid fa-bars fa " onclick="showmenu()"></i>
             </nav>
             <div class="clear"></div>
         </div>
     </header>    
-    <div class="hero-section">
+    <section class="hero-section">
         <div class="container">
             <div class="hero-content">
                 <div  class="text"><span>75% SAVE</span>For the Black Friday weekend</div>
@@ -32,10 +38,9 @@
                      with over $30 billion in transactions.</p>
                 <a href="#" class="button-primary">Try for FREE <img src="./image/Arrow Right.png"></a>     
             </div>
-            <img class="hero-img" src="./image/Illustration.png">
         </div>
-    </div>
-    <div class="crappo-section">
+    </section>
+    <section class="crappo-section">
         <div class="container">
             <div class="crappo-icon">   
                <img src="./image/digital.png">
@@ -59,7 +64,7 @@
                 </div>
             </div>
             <div class="crappo-sec-2">
-                <img class="crappo-img" src="./image/crappo-img.png" alt="">
+            
                 <div class="crappo-content">
                     <h2 class="title-xxl">Why you should choose CRAPPO</h2>
                     <p class="text">Experience the next generation cryptocurrency platform. No financial borders, 
@@ -74,13 +79,13 @@
             </div> 
              
         </div>
-    </div>    
-        <div class="trade-section">
+    </section>    
+    <section class="trade-section">
             <div class="container">
                 <div class="crappo-trade">
                     <div class="crappo-form">
-                        <input type="text" placeholder="Enter your hash rate">
-                        <input type="text" placeholder="TH/s">
+                        <input type="text" class="crappo-ip-1" placeholder="Enter your hash rate">
+                        <input type="text" class="crappo-ip-2" placeholder="TH/s">
                         <a href="#" class="button-secondary">Calculate</a>
                     </div>
                     
@@ -102,18 +107,18 @@
                         <img src="./image/ethuram.png">
                         <h3 class="title-xl">Ethereum</h3>
                         <p class="text">Blockchain technology to create and run<br> decentralized digital applications.</p>
-                        <img src="./image/Arrow Right.png" alt="">
+                        <img src="./image/bitcoin-arrow2.png" alt="">
                     </div>
                     <div class="coin-box">
                         <img src="./image/lite-coin.png">
                         <h3 class="title-xl">Litecoin</h3>
                         <p class="text">Cryptocurrency that enables instant<br> payments to anyone in the world.</p>
-                        <img src="./image/Arrow Right.png" alt="">
+                        <img src="./image/bitcoin-arrow2.png" alt="">
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="market-section">
+    </section>
+    <section class="market-section">
             <div class="container">
                 <h2 class="title-xxl">Market sentiments, portfolio, and run<br>
                      the infrastructure of your choice</h2>
@@ -159,8 +164,8 @@
 
                 
             </div>
-        </div>
-        <header>
+    </section>
+        <footer>
             <div class="container">
                 <div class="footer-logo"><img src="./image/brand-logo.png" alt=""></div>
                 <div class="col-1">
@@ -198,12 +203,21 @@
                     <img src="./image/linkedin 1.png" alt="">
                 </div>
             </div>    
-        </header>
-        <div class="container">
-            <div class="sample">rtre</div>
-            <div class="sample">tet</div>
-            <div class="sample">et</div>
-        </div>
+        </footer>
+        
     </div>
+    <!--------javascript-------->
+<script>
+    var navmenu = document.getElementById("navmenu");
+    function showmenu(){
+        navmenu.style.right="0";
+    
+    }
+    function hidemenu(){
+        navmenu.style.right="-200px";
+
+    }
+    
+</script>
 </body>
 </html>

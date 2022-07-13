@@ -66,6 +66,7 @@ a{
 .button-secondary{
     background-color:#3671E9;
     color:#FFF;
+    display: inline-block;
 }
 .button-tertiary{
     color: #0D0D2B;
@@ -115,23 +116,16 @@ nav .link:nth-of-type(5){
 nav .button-secondary{
     display:inline-block;
 }
-@media(max-width:700px) {
-nav a{
-    display:block;
-    position:absolute;
-    width:200px;
-    height: 100vh;
-    top:0;
-    right:0;
-    background-color:pink;
-    z-index: 2;
-
-}
-    
+.menu{
+    display: inline-block;
 }
 .hero-section{
     background-color:#0D0D2B;
     height:100vh;
+    background-image: url(../image/Illustration.png);
+    background-repeat: no-repeat;
+    background-size:;
+    background-position: 85% 0;
 
 }
 .hero-content span {
@@ -176,9 +170,20 @@ nav a{
     left:780px;
     height:586px;
 }
+@media (max-width:700px){
+    .hero-section h1{
+        font-size:40px;
+    }
+    .market-box{
+        display:block;
+    }
+}
 .crappo-section{
     background-color:#0D0D2B;
     position:relative;
+    background-image: url(../image/crappo-img.png);
+    background-repeat:no-repeat;
+    background-position:150px 300px;
 }
 .crappo-icon {
     display:inline-block;
@@ -204,10 +209,11 @@ nav a{
 
 .crappo-content{
     display:inline-block;
-    max-width: 50%;
+    width: 50%;
     color:#fff;
-    margin-top:76px;
-    margin-left:140px;
+    margin-top:190px;
+    margin-bottom:170px;
+    margin-left:60%;
 
 }
 .crappo-content p{
@@ -234,44 +240,37 @@ nav a{
     display: inline-block;
     padding:48px 48px ;
     width:75%;
-   /* position: relative;
-    position:absolute;
-    bottom:0px;
-    left: 50%;
-    transform:translateX(-50%);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;*/
-
-
     background-color:#fff;
-}
-.crappo-form input::after{
-    content:'';
-    width:100px;
-    height:4px;
-    background-color: #0D0D2B;
-  
-
-}
+}  
 .crappo-form .button-secondary,.crappo-form input{
     display:inline-block;
 }
 .crappo-trade{
-    position:absolute
+    position:relative;
+    margin-top:-148px;
+    text-align:center;
+}
+.crappo-ip-1{
+    width:38%;
+    margin-right: 30px;
+    border:0px;
+    border-bottom:3px solid #E0E0E0;
+}
+.crappo-ip-2{
+    width:18%;
+    margin-right:30px;
+    border:0px;
+    border-bottom:3px solid #E0E0E0;
+
 }
 .trade-content{
     background-color:#fff;
     padding:48px;
     display:inline-block;
-    width: 960px;
-    margin-left:;
-    margin-right:;
-    
+    width: 75%;    
 }
 .trade-section{
     background-color:pink;
-    
-
 }
 .trade-section h2{
     text-align:center;
@@ -302,8 +301,10 @@ nav a{
     height:32px;
     margin-left:24px;
 }
-
-
+.coin-box .button-secondary{
+    display: inline-block;
+    padding:16px 32px;
+}
 .coin-box:nth-of-type(1){
     background-color:#2B076E;
 }
@@ -374,6 +375,10 @@ nav a{
 .mining-box  button{
     margin-left:150px;
 }
+footer{
+    background-color: #0D0D2B;
+    padding:80px 0;
+}
 .footer-logo,.col-3{
     vertical-align:top;
     display:inline-block;
@@ -382,7 +387,6 @@ nav a{
     display:inline-block;
     color:#FFF;
     list-style:none;
-
 }
 .col-1{
     margin-left:170px;
@@ -403,7 +407,6 @@ nav a{
 .bottom-text{
     display: inline-block;
     color:#FFF;
-    margin-right:670px;
 }
 .social-media{
     display:inline-block;
@@ -422,3 +425,198 @@ nav a{
     margin-right:3%;
     margin-left:3%;
 }
+nav .fa {
+    color: #FFF;
+    display: none;
+}
+@media (max-width:1400px){
+    .col-3{
+        margin-left:40px;
+
+    }
+    .mining-content{
+        margin-right:100px;
+    }
+    .mining-box button{
+        margin-left:76px;
+    }
+
+}
+@media (max-width:1200px){
+    nav .link{
+        margin-right: 20px;
+    }
+    nav .link:nth-of-type(5){
+        margin-left:40px;
+        margin-right:40px;
+    }
+    .crappo-icon{
+        width:auto;
+    }
+    .crappo-icon div{
+        margin-left:10px;
+    }
+    .crappo-icon:nth-of-type(2){
+        margin:0 4%;
+        
+    }
+    .coin-box{
+        width:30%;
+    }
+    .mining-box button{
+        margin-left:12px;
+    }
+    .mining-content{
+        margin-left:5px;
+        margin-right:50px;
+        padding:32px;
+    }
+    .col-1{
+        margin-left:68px;
+    }
+    .col-2{
+        margin-left:68px;
+    }
+
+}
+@media screen and (max-width:780px) {
+    .menu{
+        position:fixed;
+        background-color: #00BFFF;
+        top:0;
+        right:-200px;
+        width:200px;
+        height:100vh;
+        z-index:2;
+        display: block;
+        margin-bottom: 15px;
+        transition: 1s;
+    }
+    nav{
+        float:right;
+    }
+    nav .fa{
+        display: inline-block;
+        margin: 10px;
+        color:#FFF;
+        font-size:22px;
+        cursor: pointer;
+    }
+    .menu .link{
+        display: block;
+        text-align:center;
+        margin-bottom:12px;
+    }
+    .login{
+        display:inline-block;
+    }
+    .hero-section h1{
+        font-size:44px;
+        line-height: 65px;
+    }
+    .hero-content div{
+        padding:4px 6px 4xp 0;
+        max-width: 314px;
+        margin-bottom: 12px;
+    }
+    .hero-content span{
+        margin-left:16px;
+        display:inline-block;
+    }
+    .text{
+        font-size:12px ;
+    }
+    .button-primary{
+        padding:14px 20px ;
+    }
+    .button-secondary{
+        padding: 10px 24px;
+    }
+    .crappo-icon{
+        width:100%;
+        text-align:center;
+        padding:50px 0;
+        margin:0px;
+    }
+    .crappo-icon h2{
+        font-size:34px;
+    }
+    .crappo-icon:nth-of-type(2){
+        margin: 0;
+    }
+    .crappo-content{
+        margin: 130px 0;
+        width:90%;
+    }
+    .crappo-form input{
+        display: block;
+        width:100%;
+        margin-bottom: 20px;
+    }
+    .crappo-form{
+        padding-bottom: 0px;
+    }
+    .coin-box{
+        width:100%;
+    }
+
+
+
+    .market-box{
+        display:block;
+
+    }
+    .market-section img{
+        width:100%;
+    }
+    .market-content{
+        margin-bottom:100px;
+        margin-right:0px;
+        text-align:left;
+        width:100%;
+
+    }
+    .market-row-1 .market-content{
+        margin-right:0px;
+    }
+    .market-row-2 img{
+        margin:0 0 100px 0;
+    }
+    .market-row-2 .market-content{
+        margin: 0px;
+    }
+    .mining-box input,.button-tertiary{
+        text-align:center;
+    }
+    .mining-box button{
+        margin-left:150px;
+    }
+    .col-1{
+        margin-left:40px;
+    }
+    
+}
+@media screen and (max-width:500px) {
+    .container {
+         max-width: calc(100% - 56px);
+         margin: auto;
+         padding: 0 10px;
+    }    
+    .hero-section h1{
+        font-size:40px;
+
+    }
+    nav{
+        display: inline-block;
+    }
+    nav .button-secondary{
+        padding:2px 8px;
+        font-size:12px ;
+    }
+    .footer-logo{
+        display:block; 
+        margin-bottom:30px;
+    }
+    
+}
+
